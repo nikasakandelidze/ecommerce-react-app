@@ -1,0 +1,52 @@
+.MenuItem{
+  border-radius: 15px;
+  margin: 15px;
+  text-align: center;
+  flex: 1;
+  width: 17%;
+  height: 100%;
+  color:#282c34;
+  background-repeat: repeat;
+
+  &:hover{
+    transform: scale(1.1);
+    margin:15px;
+    .banner{
+      opacity: 1;
+    }
+
+    opacity: 0.77;
+  }
+  transition: ease-out 0.3s;
+
+  font-size: xx-large;
+}
+
+.large{
+  flex: 5;
+  flex-basis: 80%;
+  border-radius: 15px;
+  margin: 15px;
+  text-align: center;
+  width: 80%;
+  height: 80%;
+  color:#282c34;
+  &:hover{
+    transform: scale(1);
+    margin:15px;
+    .banner{
+      opacity: 1;
+    }
+    opacity: 0.77;
+  }
+
+}
+
+.banner{
+  background-color: seashell;
+  opacity: 0.4;
+  width: 40%;
+  height: 120px;
+  margin-left: 27%;
+  transition: ease-out 0.3s;
+}
