@@ -2,6 +2,8 @@ import React from "react";
 import './Menu.scss'
 import MenuItem from "../menuitem/MenuItem";
 import {Component} from "react/cjs/react.production.min";
+import CustomContext from "../CustomContext/CustomContext";
+
 
 class  Menu extends Component {
         constructor() {
@@ -30,14 +32,14 @@ class  Menu extends Component {
                         title: 'womens',
                         imageUrl: 'https://i.ibb.co/GCCdy8t/womens.png',
                         size: 'large',
-                        id: 1,
+                        id: 4,
                         linkUrl: 'shop/womens'
                     },
                     {
                         title: 'mens',
                         imageUrl: 'https://i.ibb.co/R70vBrQ/men.png',
                         size: 'large',
-                        id: 2,
+                        id: 5,
                         linkUrl: 'shop/mens'
                     }
                 ]
@@ -47,6 +49,9 @@ class  Menu extends Component {
     render(){
         return (
             <div className='menuWrapper'>
+                <CustomContext.Consumer>
+                    {value => <h1>{value}</h1>}
+                </CustomContext.Consumer>
                 <div className='catalogueMenu'>
                     {this.state.catalogue.map(({title, imageUrl, id, size})=>{
                         return (

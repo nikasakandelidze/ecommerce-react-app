@@ -1,5 +1,6 @@
 import React from "react";
 import './MenuItem.scss'
+import PropTypes from 'prop-types';
 
 const MenuItem=({heading, imageUrl, size})=>{
     return(
@@ -17,6 +18,12 @@ const MenuItem=({heading, imageUrl, size})=>{
             </div>
         </div>
     );
+}
+
+MenuItem.propTypes={
+    heading:PropTypes.string.isRequired,
+    imageUrl:PropTypes.string.isRequired,
+    size:PropTypes.number
 }
 
 export default MenuItem;
