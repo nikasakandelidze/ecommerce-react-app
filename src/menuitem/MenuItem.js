@@ -23,7 +23,7 @@ const MenuItem=({heading, imageUrl, size})=>{
 MenuItem.propTypes={
     heading:PropTypes.string.isRequired,
     imageUrl:PropTypes.string.isRequired,
-    size:PropTypes.number
+    size:PropTypes.string
 }
 
 export default MenuItem;

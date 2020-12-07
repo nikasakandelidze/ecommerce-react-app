@@ -1,0 +1,46 @@
+.element{
+  margin:50px;
+  width: 300px;
+  background-color: lavender;
+  float:left;
+  text-align: center;
+  margin-left: 85px;
+}
+img{
+  overflow: hidden;
+}
+
+.title{
+  height: 70px;
+  background-color: ghostwhite;
+  text-align: center;
+  font-size: xx-large;
+  &:hover{
+    background-color: honeydew;
+    li{
+      opacity: 0.5;
+    }
+    font-size: xxx-large;
+    color: brown;
+  }
+  transition: ease-in-out 0.2s;
+}
+
+.image{
+  padding: 4px;
+  overflow: hidden;
+  &:hover{
+    background-color: seashell;
+    img{
+      height: 350px;
+    }
+    h4{
+      transform: scale(2);
+    }
+  }
+}
+
+
+h4, img{
+  transition: ease-in-out 0.4s;
+}
