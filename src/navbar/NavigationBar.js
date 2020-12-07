@@ -15,6 +15,11 @@ const NavigationBar = () => {
                     Shop page
                 </div>
             </Link>
+            <Link to='/sign' className='nav-item'>
+                <div >
+                    Sign in
+                </div>
+            </Link>
         </div>
     );
 }

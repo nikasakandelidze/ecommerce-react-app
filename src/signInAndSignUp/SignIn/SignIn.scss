@@ -1,0 +1,27 @@
+.sign-in{
+  margin: 40px;
+  background-color: ghostwhite;
+  width: 40%;
+  height: 350px;
+}
+
+.title{
+  font-size: xxx-large;
+  margin-left: 36px;
+}
+
+.input-form{
+  margin: 40px;
+  margin-left: 140px;
+}
+
+.submit{
+  margin-top: 40px;
+  margin-left: 80px;
+  width: 100px;
+  height: 40px;
+  border-radius: 30px;
+  &:hover{
+    background-color: #61dafb;
+  }
+}
