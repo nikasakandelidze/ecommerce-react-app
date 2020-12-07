@@ -5,6 +5,7 @@
   float:left;
   text-align: center;
   margin-left: 85px;
+  position: relative;
 }
 img{
   overflow: hidden;
@@ -17,9 +18,6 @@ img{
   font-size: xx-large;
   &:hover{
     background-color: honeydew;
-    li{
-      opacity: 0.5;
-    }
     font-size: xxx-large;
     color: brown;
   }
@@ -32,10 +30,10 @@ img{
   &:hover{
     background-color: seashell;
     img{
-      height: 350px;
+      height: 200px;
     }
     h4{
-      transform: scale(2);
+      transform: scale(1.2);
     }
   }
 }

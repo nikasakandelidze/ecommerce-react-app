@@ -1,5 +1,5 @@
 import React from 'react'
-import './ShopPage.scss'
+import './ShopPageElement.scss'
 
 const ShopPageElement = ({title, items}) => {
 
