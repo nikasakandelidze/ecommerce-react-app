@@ -1,6 +1,7 @@
 import React from 'react'
 import SignIn from "./SignIn/SignIn";
 import './SignUpSignIn.scss'
+import {connect} from "react-redux";
 
 class SignInSignUp extends React.Component {
     constructor(props) {
@@ -10,11 +11,16 @@ class SignInSignUp extends React.Component {
     render() {
         return (
             <div className='group'>
-                <SignIn className='member'/>
+                {this.props.user}
                 <SignIn className='member'/>
             </div>
         );
     }
 }
 
-export default SignInSignUp;
+const mapStateToProps = state => {
+    return {user : state.user.currentUser}
+};
+
+
+export default connect(mapStateToProps)(SignInSignUp);

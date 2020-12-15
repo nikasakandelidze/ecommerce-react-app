@@ -2,6 +2,8 @@ import React from 'react'
 import {Component} from "react/cjs/react.production.min";
 import FormInput from "../../FormInput/FormInput";
 import './SignIn.scss'
+import {connect} from "react-redux";
+import setCurrentUserAction, {setCurrentUser} from "../../my-redux/user/user-action";
 
 class SignIn extends Component {
     constructor(props) {
@@ -14,29 +16,33 @@ class SignIn extends Component {
     }
 
     handleSubmit = event => {
-        event.preventDefault();
+        console.log(this.state.email)
+        this.props.changeUser(this.state.email);
 
         this.setState({email: '', password: ''});
     };
 
     handleInputChange = event => {
         const {name, value} = event.target;
-        this.setState({[name]: value});
+        this.setState({email: value});
     }
 
     render() {
         return (
             <div className='sign-in'>
                 <span className='title'>Sign in with your email</span>
-                <form className='input-form' onSubmit={this.handleSubmit}>
-                    <FormInput handleChange={this.handleInputChange} label='email' required type='email'/>
-                    <FormInput handleChange={this.handleInputChange} label='password' required type='password'/>
-                    <input className='submit' type='submit' value='Submit'/>
-                </form>
+                <FormInput handleChange={this.handleInputChange} label='email' type='text'/>
+                <FormInput handleChange={this.handleInputChange} label='password'  type='text'/>
+                <button onClick={this.handleSubmit}>Submit</button>
             </div>
         );
     }
 
 }
 
-export default SignIn;
+const mapDispatchToProps = dispatch => {
+    return {changeUser: user => dispatch(setCurrentUserAction(user))};
+};
+
+
+export default connect(null, mapDispatchToProps)(SignIn);
