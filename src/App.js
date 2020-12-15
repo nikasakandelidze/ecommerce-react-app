@@ -6,13 +6,18 @@ import ShopPage from "./shopPage/ShopPage";
 import NavigationBar from "./navbar/NavigationBar";
 import Footer from "./footer/Footer";
 import SignInSignUp from "./signInAndSignUp/SignInSignUp";
+import CartIcon from "./cart/CartIcon";
+import CartDropDown from "./cart/CartDropDown/CartDropDown";
+import {connect} from "react-redux";
 
-function App() {
+function App(props) {
     return (
         <div>
             <BrowserRouter>
                 <NavigationBar/>
                 <CustomContext.Provider value=''>
+                    <CartIcon/>
+                    { props.isCartDropDownVisible ? <CartDropDown/> : null}
                     <Route exact path='/' component={HomePage}/>
                     <Route path='/shoppage' component={ShopPage}/>
                     <Route path='/sign' component={SignInSignUp}/>
@@ -22,5 +27,10 @@ function App() {
         </div>
     );
 }
+const mapStateToProps = state =>{
+    return {
+        isCartDropDownVisible: state.cartVisible.visible
+    };
+};
 
-export default App;
+export default connect(mapStateToProps)(App);
