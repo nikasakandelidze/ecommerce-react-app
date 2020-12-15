@@ -15,9 +15,9 @@ function App(props) {
         <div>
             <BrowserRouter>
                 <NavigationBar/>
+                <CartIcon/>
+                { props.isCartDropDownVisible ? <CartDropDown/> : null}
                 <CustomContext.Provider value=''>
-                    <CartIcon/>
-                    { props.isCartDropDownVisible ? <CartDropDown/> : null}
                     <Route exact path='/' component={HomePage}/>
                     <Route path='/shoppage' component={ShopPage}/>
                     <Route path='/sign' component={SignInSignUp}/>
@@ -29,7 +29,7 @@ function App(props) {
 }
 const mapStateToProps = state =>{
     return {
-        isCartDropDownVisible: state.cartVisible.visible
+        isCartDropDownVisible: state.cart.visible
     };
 };
 

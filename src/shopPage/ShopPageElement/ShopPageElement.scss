@@ -11,6 +11,13 @@ img{
   overflow: hidden;
 }
 
+
+.ii{
+  border: 4px black solid;
+  margin: 5px;
+  transition: ease-in-out 0.1s;
+}
+
 .title{
   height: 70px;
   background-color: ghostwhite;
@@ -32,13 +39,26 @@ img{
     img{
       height: 200px;
     }
-    h4{
-      transform: scale(1.2);
-    }
   }
 }
 
 
 h4, img{
   transition: ease-in-out 0.4s;
+}
+
+.shop-data-image{
+  overflow: hidden;
+  width: 200px;
+  height: 260px;
+  &:hover{
+    transform: rotate(30deg);
+  }
+}
+
+button{
+  &:hover{
+    background-color:seashell;
+    color:black;
+  }
 }

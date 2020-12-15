@@ -1,10 +1,15 @@
-
-
-const cartVisibleAction = visible => {
+export const cartVisibleAction = visible => {
     return {
-        type:'CHANGE_CART_DROPDOWN_VISIBILITY',
-        visible:visible
+        type: 'CHANGE_CART_DROPDOWN_VISIBILITY',
+        payload: visible
     };
 }
 
-export default cartVisibleAction;
+
+export const addItem = item => {
+    return {
+        type: 'ADD_ITEM_IN_CART',
+        payload: item
+    }
+}
+
