@@ -1,6 +1,6 @@
 import React from 'react'
 import './ShopPageElement.scss'
-import {addItem} from "../../my-redux/cart/cart-action";
+import {addItem} from "../../../my-redux/cart/cart-action";
 import {connect} from "react-redux";
 
 const ShopPageElement = ({title, items, addItem}) => {

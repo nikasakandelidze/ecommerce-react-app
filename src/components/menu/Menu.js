@@ -2,7 +2,7 @@ import React from "react";
 import './Menu.scss'
 import MenuItem from "../menuitem/MenuItem";
 import {Component} from "react/cjs/react.production.min";
-import CustomContext from "../CustomContext/CustomContext";
+import CustomContext from "../../CustomContext/CustomContext";
 
 
 class  Menu extends Component {

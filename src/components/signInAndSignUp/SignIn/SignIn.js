@@ -3,7 +3,7 @@ import {Component} from "react/cjs/react.production.min";
 import FormInput from "../../FormInput/FormInput";
 import './SignIn.scss'
 import {connect} from "react-redux";
-import setCurrentUserAction, {setCurrentUser} from "../../my-redux/user/user-action";
+import setCurrentUserAction, {setCurrentUser} from "../../../my-redux/user/user-action";
 
 class SignIn extends Component {
     constructor(props) {

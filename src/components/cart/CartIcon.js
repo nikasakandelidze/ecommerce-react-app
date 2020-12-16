@@ -1,8 +1,8 @@
 import React from "react";
-import {ReactComponent as ShoppingIcon} from "../shopping-bag.svg"
+import {ReactComponent as ShoppingIcon} from "../../shopping-bag.svg"
 import './CartIcon.scss'
 import {connect} from "react-redux";
-import {cartVisibleAction} from "../my-redux/cart/cart-action";
+import {cartVisibleAction} from "../../my-redux/cart/cart-action";
 
 const CartIcon  = (props) => {
     return (<div onClick={ e=> props.isDropDownCartVisible ? props.changeCartVisibility(false) : props.changeCartVisibility(true)} className='cart-icon'>
