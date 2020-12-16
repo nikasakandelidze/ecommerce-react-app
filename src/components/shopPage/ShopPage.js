@@ -16,7 +16,7 @@ class ShopPage extends Component{
     render(){
         return (
             <div className='wrapper'>
-                {this.state.shoppingData.map(e => <ShopPageElement title={e.title} items={e.items}/>)}
+                {this.state.shoppingData.map(e => <ShopPageElement key={e.id} title={e.title} items={e.items}/>)}
             </div>
         );
     }

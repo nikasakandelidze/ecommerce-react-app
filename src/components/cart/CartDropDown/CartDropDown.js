@@ -2,6 +2,8 @@ import React from "react";
 import './CartDropDown.scss'
 import {connect} from "react-redux";
 import CartItem from "./CartItem";
+import {withRouter} from 'react-router-dom'
+import {cartVisibleAction} from "../../../my-redux/cart/cart-action";
 
 const CartDropDown = (props) => {
     return (<div className='drop-down-menu'>
@@ -9,7 +11,10 @@ const CartDropDown = (props) => {
             Cart
         </div>
         <div className='check-out'>
-            <button>Checkout</button>
+            <button onClick={()=>{
+                props.history.push('/checkout');
+                props.changeCartVisibility(false);
+            }}>Checkout</button>
         </div>
         <div className='list-items'>
         {
@@ -26,4 +31,11 @@ const mapStateToProps = state =>{
     }
 }
 
-export default connect(mapStateToProps)(CartDropDown);
+
+const mapDispatchToProps = dispatch => {
+    return {
+        changeCartVisibility: visible => dispatch(cartVisibleAction(visible))
+    };
+};
+
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(CartDropDown));

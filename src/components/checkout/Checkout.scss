@@ -1,0 +1,31 @@
+.checkout-page{
+  width: 90%;
+  height: 400px;
+  border: 2px black solid;
+  background-color: azure;
+  position: absolute;
+  margin-top: 40px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  align-content: center;
+  margin-left: 60px;
+}
+
+.checkout-title{
+  width: 30%;
+  height: 70px;
+  text-align: center;
+  font-size: xxx-large;
+  float: left;
+}
+
+.total{
+  float: right;
+  font-size: xxx-large;
+}
+
+.checkout-item{
+  align-content: center;
+  margin-left: 300px;
+  margin-top: 100px;
+}

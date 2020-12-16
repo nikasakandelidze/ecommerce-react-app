@@ -9,6 +9,7 @@ import SignInSignUp from "./components/signInAndSignUp/SignInSignUp";
 import CartIcon from "./components/cart/CartIcon";
 import CartDropDown from "./components/cart/CartDropDown/CartDropDown";
 import {connect} from "react-redux";
+import Checkout from "./components/checkout/Checkout";
 
 function App(props) {
     return (
@@ -21,6 +22,7 @@ function App(props) {
                     <Route exact path='/' component={HomePage}/>
                     <Route path='/shoppage' component={ShopPage}/>
                     <Route path='/sign' component={SignInSignUp}/>
+                    <Route path='/checkout' component={Checkout}/>
                 </CustomContext.Provider>
                 <Footer/>
             </BrowserRouter>
